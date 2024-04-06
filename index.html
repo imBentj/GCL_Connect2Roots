@@ -6,56 +6,60 @@
     <title>Company Landing Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon2.ico" type="image/x-icon">
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-header {
-    text-align: center;
-    padding: 20px 0;
-}
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
 
-.logo {
-    width: 700px;
-    height: 250px;
-}
+        .logo {
+            max-width: 100%;
+    		height: 250px;
+        }
 
-.intro {
-    text-align: center;
-    margin: 20px 0;
-}
 
-.courses {
-    text-align: center;
-}
+        .intro {
+            text-align: center;
+            margin: 20px 0;
+            padding: 0 20px; /* Add padding for better readability on mobile devices */
+        }
 
-.row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+        .courses {
+            text-align: center;
+        }
 
-.course {
-    width: 30%;
-    margin: 0 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        .row {
+            display: flex;
+            flex-wrap: wrap; /* Allow courses to wrap to the next line */
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-.course h3 {
-    margin-top: 0;
-}
+        .course {
+            width: calc(33.33% - 20px); /* Three courses per row on larger screens */
+            margin: 0 10px 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
 
-.course a {
-    text-decoration: none;
-    color: blue;
-}
+        .course h3 {
+            margin-top: 0;
+        }
 
-footer {
+        .course a {
+            text-decoration: none;
+            color: blue;
+        }
+
+	footer {
             text-align: center;
             background-color: #f0f0f0;
             padding: 10px;
@@ -63,8 +67,12 @@ footer {
             width: 100%;
         }
 
-
-</style>
+        @media only screen and (max-width: 600px) {
+            .course {
+                width: calc(50% - 20px); /* Two courses per row on smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -72,14 +80,9 @@ footer {
     </header>
     
     <section class="intro">
-        <!---<p>Welcome to our company! We specialize in [company's area of operation].</p>--->
-	<p><b>Connect to Roots (C2R)</b> is a non-profit organization conceptualized, managed, and run by a group of Indian with specialization in areas of social, Information Technology, economics, culture, and polity framework.
-
-<p>Through this platform, any individual can contribute to society right now and here from your office/home and start contributing by donating your free time or through donating funds to upliftment of the society. volunteers/donors can connect to their village and towns, select a project of their interest which they can monitor and guide themselves.</p>
-<br>
-
-<b>We look forward to connecting with you !!</b></p>
-<br>
+        <p><b>Connect to Roots (C2R)</b> is a non-profit organization conceptualized, managed, and run by a group of Indian with specialization in areas of social, Information Technology, economics, culture, and polity framework.</p>
+        <p>Through this platform, any individual can contribute to society right now and here from your office/home and start contributing by donating your free time or through donating funds to upliftment of the society. volunteers/donors can connect to their village and towns, select a project of their interest which they can monitor and guide themselves.</p>
+        <p><b>We look forward to connecting with you !!</b></p>
     </section>
     
     <section class="courses">
@@ -109,7 +112,7 @@ footer {
             </div>
             <div class="course">
                 <h3>Introduction to Information Technology</h3>
-                <p> Explore the basics of information technology, including computer hardware, software, networking, and cybersecurity. Gain foundational knowledge to understand how technology shapes our modern world and its applications across various industries.</p>
+                <p>Explore the basics of information technology, including computer hardware, software, networking, and cybersecurity. Gain foundational knowledge to understand how technology shapes our modern world and its applications across various industries.</p>
                 <a href="https://drive.google.com/drive/folders/1CL3uBtxauMzjm01IXTlaM0u6eIKPGOYv?usp=sharing" target="_blank">Explore Content</a>
             </div>
             <div class="course">
@@ -119,7 +122,8 @@ footer {
             </div>
         </div>
     </section>
-	<footer>
+
+<footer>
         Made with ❤️ by <b>Group 20</b>
     	</footer>
 </body>
